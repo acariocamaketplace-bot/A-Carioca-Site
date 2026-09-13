@@ -46,27 +46,9 @@ a:focus-visible {
   position: fixed;
   inset: 0 0 auto;
   z-index: 10;
-  background: rgba(43, 75, 107, 0.507);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(3x);
-  height: 60px;
-  margin: auto;
-  margin-top: 15px;
-  border-radius: 15px;
-  padding-right: 20px;
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-.site-header:hover {
-  width: 95%;
-  position: fixed;
-  inset: 0 0 auto;
-  z-index: 10;
   background: rgba(7, 26, 45, 0.94);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  /* backdrop-filter: blur(16px); */
+   backdrop-filter: blur(16px); 
   height: 60px;
   margin: auto;
   margin-top: 15px;
@@ -210,9 +192,7 @@ a:focus-visible {
 
   z-index: 10;
 
-  max-width: 690px;
-
-  min-width: 0;
+  background:rgba(255, 255, 255, 0.336);
 }
 
 /* ==========================================================
@@ -279,178 +259,196 @@ a:focus-visible {
    CAIXA DE TEXTO E TÍTULO PRINCIPAL DO HERO
    ========================================================== */
 
-.hero-section .hero-copy {
+/* /* ==========================================================
+   HERO CENTRALIZADO SOBRE A IMAGEM
+   Conteúdo alinhado ao centro, com contraste suave e leitura clara.
+   Cole este bloco depois das regras antigas do Hero para substituir
+   os alinhamentos anteriores sem alterar as outras sections.
+   ========================================================== */
+
+.hero-section {
   position: relative;
-  z-index: 10;
-  align-self: center;
-  width: 100%;
-  max-width: 690px;
-  min-width: 0;
-  margin: 0;
-  margin-top: -80px;
-  padding: 50px;
+  min-height: 760px;
+  overflow: hidden;
+  isolation: isolate;
 }
 
-.hero-section .hero-copy h1 {
-  display: block;
+.hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(246, 243, 237, 0.18) 0%,
+      rgba(246, 243, 237, 0.42) 52%,
+      rgba(246, 243, 237, 0.72) 100%
+    ),
+    url("assets/macaco-rio.png") center center / cover no-repeat;
+  pointer-events: none;
+}
+
+.hero-content {
+  display: grid;
+  min-height: 760px;
   width: 100%;
-  max-width: 660px;
-  margin: 30px 0 26px;
+  max-width: 980px;
+  place-items: left;
+  padding: 132px 24px 82px;
+
+  /* justify-items: left; */
+}
+
+.hero-copy {
+  display: flex;
+  width: min(100%, 760px);
+  max-width: 760px;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: clamp(30px, 5vw, 58px) clamp(22px, 5vw, 62px);
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  border-radius: 32px;
+  background: rgba(246, 243, 237, 0.76);
+  box-shadow:
+    0 24px 70px rgba(7, 26, 45, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.hero-copy .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: var(--blue);
+}
+
+.hero-copy h1 {
+  width: 100%;
+  max-width: 700px;
+  margin: 23px 0 22px;
   color: var(--navy);
   font-family: "Poppins", sans-serif;
-  font-size: clamp(46px, 6vw, 78px);
+  font-size: clamp(46px, 6.5vw, 78px);
   font-weight: 800;
-  line-height: 1.06;
-  letter-spacing: -0.045em;
+  line-height: 1.02;
+  letter-spacing: -0.06em;
 }
 
-.hero-section .hero-copy h1 em {
+.hero-copy h1 em {
   color: var(--blue);
   font-family: "Caveat", cursive;
-  font-size: 1.13em;
+  font-size: 1.12em;
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0;
 }
 
-.hero-section .hero-copy .hero-lead {
+.hero-copy .hero-lead {
   width: 100%;
-  max-width: 500px;
-  margin: 0 0 32px;
+  max-width: 570px;
+  margin: 0 auto 30px;
   color: var(--muted);
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.75;
-  letter-spacing: -0.01em;
 }
 
-.hero-section .hero-copy .hero-actions {
+.hero-copy .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  justify-content: center;
+  gap: 12px;
 }
 
-.hero-section .hero-copy .trust-line {
+.hero-copy .trust-line {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 7px;
-  margin-top: 24px;
+  margin: 22px 0 0;
   color: var(--muted);
   font-size: 12px;
   font-weight: 700;
   line-height: 1.5;
 }
 
-/* Tablet */
+.hero-copy .trust-line span {
+  font-size: 14px;
+}
+
 @media (max-width: 850px) {
-  .hero-section .hero-copy {
-    max-width: 620px;
+  .hero-section,
+  .hero-content {
+    min-height: 690px;
   }
 
-  .hero-section .hero-copy h1 {
-    max-width: 620px;
-    font-size: clamp(44px, 8vw, 68px);
+  .hero-content {
+    padding: 116px 20px 70px;
+  }
+
+  .hero-copy {
+    width: min(100%, 680px);
   }
 }
 
-/* Celular */
 @media (max-width: 600px) {
-  .hero-section .hero-copy {
+  .hero-section,
+  .hero-content {
+    min-height: 650px;
+  }
+
+  .hero-image {
+    background-position: 58% center;
+  }
+
+  .hero-content {
+    padding: 104px 15px 58px;
+  }
+
+  .hero-copy {
     width: 100%;
-    max-width: 100%;
+    padding: 28px 18px 30px;
+    border-radius: 24px;
+    background: rgba(246, 243, 237, 0.84);
   }
 
-  .hero-section .hero-copy h1 {
-    max-width: 100%;
-    margin-top: 24px;
-    margin-bottom: 22px;
-    font-size: clamp(42px, 12vw, 58px);
-    line-height: 1.08;
-    letter-spacing: -0.04em;
+  .hero-copy h1 {
+    margin: 19px 0 19px;
+    font-size: clamp(40px, 12vw, 58px);
+    line-height: 1.06;
   }
 
-  .hero-section .hero-copy .hero-lead {
-    max-width: 100%;
-    font-size: 16px;
-    line-height: 1.7;
+  .hero-copy .hero-lead {
+    font-size: 14px;
+    line-height: 1.65;
   }
 
-  .hero-section .hero-copy .hero-actions {
-    gap: 10px;
+  .hero-copy .hero-actions {
+    width: 100%;
+  }
+
+  .hero-copy .button {
+    flex: 1 1 180px;
+  }
+
+  .hero-copy .trust-line {
+    font-size: 11px;
   }
 }
 
-/* Mockup maior, mas sem ultrapassar a coluna */
-.hero-section .phone-mockup {
-  position: relative;
-  z-index: 2;
-  display: block;
-
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-
-/* RIO */
-
-/* ==========================================================
-   CONTAINER
-   ========================================================== */
-
-.hero-content {
-  width: 100%;
-  min-height: 560px;
-  margin-top: 0;
-  column-gap: 24px;
-
-  position: relative;
-
-  z-index: 5;
-
-  display: grid;
-
-  /*
-     TEXTO       CELULAR
-     1.20fr      0.58fr
-  */
-
-  grid-template-columns:
-    minmax(0, 1.2fr)
-    minmax(260px, 0.58fr);
-
-  align-items: center;
-  padding-top: 76px;
-  padding-bottom: 60px;
-}
-
-/* ==========================================================
-   IMAGEM DO RIO
-   ========================================================== */
-
-.hero-image {
-  position: absolute;
-
-  /*
-     A imagem começa depois da área principal
-     do texto e ocupa todo o lado direito.
-  */
-
-  top: 0;
-  right: 0;
-  bottom: 0;
-
-  left: 28%;
-
-  z-index: -3;
-
-  background: url("assets/macaco-rio.png") center center / cover no-repeat;
-
-  pointer-events: none;
+@media (prefers-reduced-transparency: reduce) {
+  .hero-copy {
+    background: var(--cream);
+    backdrop-filter: none;
+  }
 }
 
 /* ==========================================================
    OVERLAY
    ========================================================== */
-
+/* 
 .hero-overlay {
   position: absolute;
 
@@ -473,8 +471,8 @@ a:focus-visible {
     rgba(242, 248, 255, 0.08) 75%,
 
     rgba(242, 248, 255, 0.02) 100%
-  );
-}
+  ); */
+/* } */
 
 /* ==========================================================
    APP PREVIEW — COMPOSIÇÃO SIMPLES E ESTÁTICA
@@ -2464,6 +2462,7 @@ a:focus-visible {
 .hero-section {
   min-height: 620px;
   margin-bottom: 0;
+  display: flex;
 }
 
 .hero-section .hero-phone-container {

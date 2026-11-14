@@ -1,247 +1,382 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="A Carioca conecta lojistas e clientes em uma experiência simples, segura e com a cara do Rio."
-    />
-    <title>A Carioca — Marketplace</title>
+    <!-- Tipografia -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="A Carioca: descubra lojas, produtos, serviços e oportunidades perto de você."
+    />
+
+    <title>A Carioca | O Rio na palma da sua mão</title>
   </head>
+
   <body>
+    <!-- =========================================================
+        HEADER -- BARRA DE NAVEGAÇAO 
+            ========================================================= -->
     <header class="site-header">
-      <a class="brand" href="#inicio" aria-label="A Carioca — início">
-        <img
-          class="brand-logo"
-          src="assets/logo.png"
-          alt="A Carioca — Marketplace"
-        />
+      <a class="brand" href="#inicio" aria-label="A Carioca - início">
+        <img class="brand-logo" src="assets/logo.png" alt="Logo A Carioca" />
+
         <span class="brand-copy">
           <strong>A Carioca</strong>
+          <small>O Rio mais perto de você</small>
         </span>
       </a>
 
+      <!-- Controle do menu mobile -->
       <input class="menu-toggle" type="checkbox" id="menu-toggle" />
-      <label class="menu-button" for="menu-toggle">
+
+      <label class="menu-button" for="menu-toggle" aria-label="Abrir menu">
         <span></span>
         <span></span>
         <span></span>
-        <b>Menu</b>
       </label>
+
+      <!-- NAVEGAÇÃO -->
       <nav class="main-nav" aria-label="Navegação principal">
-        <a href="#inicio">Início</a>
-        <a href="termos.html">Termos e Políticas</a>
-        <a href="#planos">Planos </a>
+        <a href="#inicio" class="active">Início</a>
+
         <a href="#sobre">Sobre nós</a>
+
+        <a href="#planos">Planos</a>
+
+        <a href="termos.html">Termos e Políticas</a>
       </nav>
-      <a class="button button-primary header-cta" href="#planos">
-        <i class="fab fa-android" aria-hidden="true"></i> Baixe o app
+
+      <!-- BOTÃO PRINCIPAL -->
+      <a class="button button-primary header-cta" href="#download">
+        Baixar aplicativo
+
+        <span class="button-arrow">↗</span>
       </a>
     </header>
 
-    <section class="hero-section" id="inicio">
-      <!-- Elementos decorativos de profundidade -->
-      <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
-      <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
-      <div class="hero-blob hero-blob-3" aria-hidden="true"></div>
+    <!-- =========================================================
+            HERO SECTION
+            ========================================================= -->
+    <main>
+      <section class="hero-section" id="inicio">
+        <!-- Camadas de iluminação -->
+        <div class="hero-overlay"></div>
 
-      <!-- Imagem de fundo -->
-      <div class="hero-image" aria-hidden="true"></div>
-
-      <div class="hero-content">
-        <div class="hero-copy">
-          <p class="eyebrow">
-            <span aria-hidden="true"></span>
-            O marketplace feito para o Rio
-          </p>
+        <!-- Conteúdo central -->
+        <div class="hero-content">
+          <span class="hero-eyebrow">
+            <span class="eyebrow-line"></span>
+            DESCUBRA O SEU RIO
+            <span class="eyebrow-line"></span>
+          </span>
 
           <h1>
-            O <em>Rio de Janeiro</em>
-
-            na palma da sua mão.
+            O Rio de Janeiro
+            <br />
+            na palma da
+            <span class="highlight">sua mão.</span>
           </h1>
 
-          <p class="hero-lead">
-            Lojas, ofertas e produtos de empresas cariocas em uma experiência
-            simples, segura e do seu jeito.
+          <p class="hero-description">
+            Lojas, produtos, serviços e oportunidades perto de você. Descubra o
+            comércio local e encontre tudo o que procura.
           </p>
 
+          <!-- AÇÕES -->
           <div class="hero-actions">
-            <a class="button button-primary" href="#selecao">
-              Explorar produtos
-              <span aria-hidden="true">→</span>
+            <a href="#download" class="button button-yellow">
+              Conheça o aplicativo
+              <span>↗</span>
             </a>
 
-            <a class="button button-secondary" href="#planos">
-              Quero anunciar
-              <span aria-hidden="true">→</span>
+            <a href="#planos" class="button button-outline">
+              Conheça nossos planos
             </a>
           </div>
 
-          <div class="trust-line">
-            <span aria-hidden="true">🛡️</span>
-            Seguro, rápido e fácil de usar
+          <!-- Informação complementar -->
+          <div class="hero-footer">
+            <span class="footer-dot"></span>
+
+            <span>
+              Conectando pessoas e negócios por todo o Rio de Janeiro.
+            </span>
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Prévia do aplicativo A Carioca">
-          <div class="hero-visual-glow" aria-hidden="true"></div>
+        <!-- Indicador de rolagem -->
+        <a href="#sobre" class="scroll-indicator" aria-label="Rolar para baixo">
+          <span>ROLE PARA DESCOBRIR</span>
 
-          <img
-            class="hero-mockup"
-            src="assets/captura.mockup.central.png"
-            alt="Mockup do aplicativo A Carioca"
-          />
+          <div class="scroll-line"></div>
+        </a>
+      </section>
 
-          <span class="hero-orbit hero-orbit-left" aria-hidden="true"></span>
-          <span class="hero-orbit hero-orbit-right" aria-hidden="true"></span>
-        </div>
-      </div>
-    </section>
+      <!-- =========================================================
+            SECTION APP PREVIEW -- 3 MOCKUPS
+            ========================================================= -->
 
-    <!-- =========================================================
-    APP PREVIEW
-    ========================================================= -->
+      <section class="app-preview-section">
+        <div class="app-preview-layout">
+          <!-- ==================================================
+                     CABEÇALHO
+                     ================================================== -->
 
-    <section id="app-preview" class="app-preview-section">
-      <div class="app-preview-layout">
-        <div class="app-preview-copy">
-          <p class="section-kicker">DO SEU BAIRRO PARA O RIO</p>
-          <h2>O app que coloca <em>o melhor</em> na sua mão.</h2>
-          <p>
-            O Rio inteiro mais perto do seu negócio.
+          <header class="app-preview-header">
+            <span class="section-kicker"> A Carioca conecta </span>
 
-            <strong>Deixe sua loja chegar mais longe.</strong>
-          </p>
-          <p class="app-preview-caption">DESCUBRA O SEU RIO</p>
-        </div>
+            <h2>
+              O comércio local,
+              <em>mais perto de você.</em>
+            </h2>
 
-        <div
-          class="app-mockup-group"
-          aria-label="Conjunto com três telas do aplicativo A Carioca"
-        >
-          <figure class="app-mockup app-mockup-back-left">
-            <img
-              src="assets/captura.mockup.left.png"
-              alt="Tela inicial do aplicativo A Carioca"
-            />
-          </figure>
-          <figure class="app-mockup app-mockup-main">
-            <img
-              src="assets/captura.mockup.central.png"
-              alt="Tela principal do aplicativo A Carioca"
-            />
-          </figure>
-          <figure class="app-mockup app-mockup-back-right">
-            <img
-              src="assets/captura.mockup.right.png"
-              alt="Perfil de loja do aplicativo A Carioca"
-            />
-          </figure>
-        </div>
-      </div>
-    </section>
-    <!-- ==========================================================
-     APP SHOWCASE — DEVE VIR ABAIXO DO APP PREVIEW
-     ========================================================== -->
-    <section id="selecao" class="app-showcase">
-      <div class="showcase-card">
-        <div class="showcase-container">
-          <div class="showcase-track">
-            <!-- GRUPO 1 (Original) -->
-            <div class="showcase-categories">
-              <div class="category-item">
-                <i class="fas fa-laptop" aria-hidden="true"></i
-                ><span>Informática</span>
-              </div>
-              <div class="category-item">
-                <i class="fas fa-book-open" aria-hidden="true"></i
-                ><span>Livros</span>
-              </div>
-              <div class="category-item">
-                <i class="fas fa-tshirt" aria-hidden="true"></i
-                ><span>Moda</span>
-              </div>
-              <div class="category-item">
-                <i class="fas fa-gamepad" aria-hidden="true"></i
-                ><span>Gamer</span>
-              </div>
-              <div class="category-item">
-                <i class="fas fa-paw" aria-hidden="true"></i><span>Pets</span>
-              </div>
-              <div class="category-item">
-                <i class="fas fa-spray-can" aria-hidden="true"></i
-                ><span>Beleza</span>
-              </div>
-              <div class="category-item">
-                <i class="fas fa-couch" aria-hidden="true"></i><span>Casa</span>
-              </div>
-              <div class="category-item">
-                <i class="fas fa-car" aria-hidden="true"></i
-                ><span>Automotivos</span>
-              </div>
-              <div class="category-item">
-                <i class="fas fa-tags" aria-hidden="true"></i
-                ><span>Ofertas</span>
+            <p>Uma experiência que aproxima quem procura de quem vende.</p>
+          </header>
+
+          <!-- ==================================================
+                     BENEFÍCIO 01
+                     ================================================== -->
+
+          <article class="app-benefit">
+            <div class="app-benefit-visual">
+              <div class="app-mockup">
+                <img
+                  src="assets/mockup.vermelho.png"
+                  alt="Aplicativo A Carioca mostrando lojas e produtos"
+                />
               </div>
             </div>
 
-            <!-- GRUPO 2 (Cópia idêntica para o efeito infinito) -->
-            <div class="showcase-categories">
-              <div class="category-item">
-                <i class="fas fa-laptop" aria-hidden="true"></i
-                ><span>Informática</span>
+            <div class="app-benefit-copy">
+              <span class="app-benefit-number"> PARA QUEM COMPRA </span>
+
+              <h3>
+                Descubra o que sua cidade tem de
+                <span>melhor.</span>
+              </h3>
+
+              <p>
+                Encontre lojas, explore categorias e conheça produtos de
+                diferentes negócios em uma experiência simples, visual e feita
+                para aproximar você do comércio local.
+              </p>
+
+              <span class="app-benefit-tag">
+                Explore novas possibilidades
+              </span>
+            </div>
+          </article>
+
+          <!-- ==================================================
+                     BENEFÍCIO 02
+                     ================================================== -->
+
+          <article class="app-benefit app-benefit--reverse">
+            <div class="app-benefit-visual">
+              <div class="app-mockup">
+                <img
+                  src="assets/mockup.laranja.png"
+                  alt="Tela da A Carioca mostrando uma loja e seus produtos"
+                />
               </div>
-              <div class="category-item">
-                <i class="fas fa-book-open" aria-hidden="true"></i
-                ><span>Livros</span>
+            </div>
+
+            <div class="app-benefit-copy">
+              <span class="app-benefit-number"> PARA QUEM VENDE </span>
+
+              <h3>
+                Sua loja merece ser
+                <span>vista.</span>
+              </h3>
+
+              <p>
+                Apresente sua marca em uma vitrine digital, organize seus
+                produtos e destaque o que faz seu negócio ser único para quem
+                está procurando.
+              </p>
+
+              <span class="app-benefit-tag">
+                Dê visibilidade ao seu negócio
+              </span>
+            </div>
+          </article>
+
+          <!-- ==================================================
+                     BENEFÍCIO 03
+                     ================================================== -->
+
+          <article class="app-benefit">
+            <div class="app-benefit-visual">
+              <div class="app-mockup">
+                <img
+                  src="assets/mockup.ciano.png"
+                  alt="A Carioca mostrando produtos e lojas próximas"
+                />
               </div>
-              <div class="category-item">
-                <i class="fas fa-tshirt" aria-hidden="true"></i
-                ><span>Moda</span>
+            </div>
+
+            <div class="app-benefit-copy">
+              <span class="app-benefit-number"> CONEXÃO LOCAL </span>
+
+              <h3>
+                Mais oportunidades para o comércio da
+                <span>região.</span>
+              </h3>
+
+              <p>
+                Quem compra encontra novas opções. Quem vende ganha mais uma
+                oportunidade de apresentar seus produtos e ser descoberto por
+                consumidores.
+              </p>
+
+              <span class="app-benefit-tag">
+                Uma conexão que movimenta a cidade
+              </span>
+            </div>
+          </article>
+
+          <!-- ==================================================
+                     BENEFÍCIO 04
+                     ================================================== -->
+
+          <article class="app-benefit app-benefit--reverse">
+            <div class="app-benefit-visual">
+              <div class="app-mockup">
+                <img
+                  src="assets/mockup.roxo.png"
+                  alt="Painel de gestão da loja na A Carioca"
+                />
               </div>
-              <div class="category-item">
-                <i class="fas fa-gamepad" aria-hidden="true"></i
-                ><span>Gamer</span>
+            </div>
+
+            <div class="app-benefit-copy">
+              <span class="app-benefit-number"> PARA O SEU NEGÓCIO </span>
+
+              <h3>
+                Tenha mais clareza sobre sua
+                <span>presença.</span>
+              </h3>
+
+              <p>
+                Uma área pensada para o lojista administrar sua vitrine e,
+                conforme os recursos disponíveis no plano, acompanhar
+                informações importantes da sua loja.
+              </p>
+
+              <span class="app-benefit-tag"> Sua loja mais organizada </span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ==========================================================
+            APP SHOWCASE — LOOPING DE PRODUTOS
+            ========================================================== -->
+      <section id="selecao" class="app-showcase">
+        <div class="showcase-card">
+          <div class="showcase-container">
+            <div class="showcase-track">
+              <!-- GRUPO 1 (Original) -->
+              <div class="showcase-categories">
+                <div class="category-item">
+                  <i class="fas fa-laptop" aria-hidden="true"></i
+                  ><span>Informática</span>
+                </div>
+                <div class="category-item">
+                  <i class="fas fa-book-open" aria-hidden="true"></i
+                  ><span>Livros</span>
+                </div>
+                <div class="category-item">
+                  <i class="fas fa-tshirt" aria-hidden="true"></i
+                  ><span>Moda</span>
+                </div>
+                <div class="category-item">
+                  <i class="fas fa-gamepad" aria-hidden="true"></i
+                  ><span>Gamer</span>
+                </div>
+                <div class="category-item">
+                  <i class="fas fa-paw" aria-hidden="true"></i><span>Pets</span>
+                </div>
+                <div class="category-item">
+                  <i class="fas fa-spray-can" aria-hidden="true"></i
+                  ><span>Beleza</span>
+                </div>
+                <div class="category-item">
+                  <i class="fas fa-couch" aria-hidden="true"></i
+                  ><span>Casa</span>
+                </div>
+                <div class="category-item">
+                  <i class="fas fa-car" aria-hidden="true"></i
+                  ><span>Automotivos</span>
+                </div>
+                <div class="category-item">
+                  <i class="fas fa-tags" aria-hidden="true"></i
+                  ><span>Ofertas</span>
+                </div>
               </div>
-              <div class="category-item">
-                <i class="fas fa-paw" aria-hidden="true"></i><span>Pets</span>
-              </div>
-              <div class="category-item">
-                <i class="fas fa-spray-can" aria-hidden="true"></i
-                ><span>Beleza</span>
-              </div>
-              <div class="category-item">
-                <i class="fas fa-couch" aria-hidden="true"></i><span>Casa</span>
-              </div>
-              <div class="category-item">
-                <i class="fas fa-car" aria-hidden="true"></i
-                ><span>Automotivos</span>
-              </div>
-              <div class="category-item">
-                <i class="fas fa-tags" aria-hidden="true"></i
-                ><span>Ofertas</span>
+
+              <!-- GRUPO 2 (Cópia idêntica para o efeito infinito) -->
+              <div class="showcase-categories">
+                <div class="category-item">
+                  <i class="fas fa-laptop" aria-hidden="true"></i
+                  ><span>Informática</span>
+                </div>
+                <div class="category-item">
+                  <i class="fas fa-book-open" aria-hidden="true"></i
+                  ><span>Livros</span>
+                </div>
+                <div class="category-item">
+                  <i class="fas fa-tshirt" aria-hidden="true"></i
+                  ><span>Moda</span>
+                </div>
+                <div class="category-item">
+                  <i class="fas fa-gamepad" aria-hidden="true"></i
+                  ><span>Gamer</span>
+                </div>
+                <div class="category-item">
+                  <i class="fas fa-paw" aria-hidden="true"></i><span>Pets</span>
+                </div>
+                <div class="category-item">
+                  <i class="fas fa-spray-can" aria-hidden="true"></i
+                  ><span>Beleza</span>
+                </div>
+                <div class="category-item">
+                  <i class="fas fa-couch" aria-hidden="true"></i
+                  ><span>Casa</span>
+                </div>
+                <div class="category-item">
+                  <i class="fas fa-car" aria-hidden="true"></i
+                  ><span>Automotivos</span>
+                </div>
+                <div class="category-item">
+                  <i class="fas fa-tags" aria-hidden="true"></i
+                  ><span>Ofertas</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- SECTION lojistas
-
+      <!-- =========================================================
+            SECTION LOJISTAS
+            ========================================================= -->
       <section id="lojistas" class="vendedor-section">
         <div class="vendedor-grid">
           <div class="vendedor-visual">
@@ -275,782 +410,1082 @@
             >
           </div>
         </div>
-      </section> -->
+      </section>
 
-    <section class="about-section" id="sobre">
-      <div class="about-container">
-        <div class="about-composition">
-          <div class="about-intro">
-            <p class="about-kicker">
-              <span aria-hidden="true"></span>
-              SOBRE NÓS
-            </p>
-
-            <h2>Porque anunciar n<em>A Carioca</em>?</h2>
-
-            <p class="about-description">
-              A Carioca aproxima pessoas, negócios e experiências que fazem
-              parte da vida carioca. Uma forma simples de encontrar o que
-              acontece perto de você e ajudar o comércio local a chegar mais
-              longe.
-            </p>
-
-            <a href="#app" class="about-link">
-              Conheça a A Carioca
-              <span aria-hidden="true">→</span>
-            </a>
-          </div>
-
-          <div class="about-benefits-wrapper">
-            <div class="about-benefits-heading">
-              <p class="benefits-kicker">
-                POR QUE COLOCAR SUA LOJA NA A CARIOCA?
+      <!-- =========================================================
+     SECTION ABOUT — SOBRE A CARIOCA
+     ========================================================= -->
+      <section class="about-section" id="sobre">
+        <div class="about-container">
+          <div class="about-composition">
+            <!-- INTRODUÇÃO -->
+            <div class="about-intro">
+              <p class="about-kicker">
+                <span aria-hidden="true"></span>
+                SOBRE A CARIOCA
               </p>
 
-              <p class="benefits-intro">
-                Porque estar presente é o primeiro passo para ser descoberto.
-              </p>
+              <h2>
+                Por que anunciar<br />
+                n<em>A Carioca</em>?
+              </h2>
             </div>
 
-            <div class="about-benefits">
-              <article class="benefit-card benefit-card-blue">
-                <div
-                  class="about-benefits-image"
-                  role="img"
-                  aria-label="Imagem representando o benefício de anunciar sem comissão"
-                ></div>
-
-                <div class="benefit-card-content">
-                  <div class="benefit-icon" aria-hidden="true">%</div>
-                  <div class="benefit-number">0%</div>
-
-                  <h3>Sem comissão por venda.</h3>
-
-                  <p>
-                    Você anuncia seus produtos sem pagar comissão sobre cada
-                    venda realizada.
-                  </p>
-                </div>
-              </article>
-
-              <article class="benefit-card benefit-card-mint">
-                <div
-                  class="about-benefits-image"
-                  role="img"
-                  aria-label="Imagem representando ativação rápida"
-                ></div>
-
-                <div class="benefit-card-content">
-                  <div class="benefit-icon" aria-hidden="true">⚡</div>
-                  <div class="benefit-number">1 dia útil</div>
-
-                  <h3>Ativação sem enrolação.</h3>
-
-                  <p>
-                    Após o cadastro, nossa equipe entra em contato para ajudar
-                    você a começar.
-                  </p>
-                </div>
-              </article>
-
-              <article class="benefit-card benefit-card-yellow">
-                <div
-                  class="about-benefits-image"
-                  role="img"
-                  aria-label="Imagem representando maior visibilidade"
-                ></div>
-
-                <div class="benefit-card-content">
-                  <div class="benefit-icon" aria-hidden="true">✦</div>
-                  <div class="benefit-number">Sua loja</div>
-
-                  <h3>Mais perto de quem procura.</h3>
-
-                  <p>
-                    Apresente sua loja e seus produtos para pessoas que estão
-                    descobrindo o comércio do Rio.
-                  </p>
-                </div>
-              </article>
-
-              <article class="benefit-card benefit-card-purple">
-                <div
-                  class="about-benefits-image"
-                  role="img"
-                  aria-label="Imagem representando o alcance da loja"
-                ></div>
-
-                <div class="benefit-card-content">
-                  <div class="benefit-icon" aria-hidden="true">★</div>
-
-                  <div class="benefit-number">Mais alcance</div>
-
-                  <h3>Destaque para sua loja.</h3>
-
-                  <p>
-                    Mostre o diferencial do seu negócio e alcance novos clientes
-                    dentro da plataforma.
-                  </p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ---------------------------
-     SECTION documentação
-     ------------------------->
-
-    <section
-      class="documentation-section"
-      id="documentacao"
-      aria-labelledby="documentation-title"
-    >
-      <div class="content-width">
-        <div class="documentation-heading">
-          <div>
-            <p class="section-kicker">TODOS OS BENEFÍCIOS</p>
-            <h2 id="documentation-title">Coloque sua loja <em>no Mapa</em></h2>
-          </div>
-        </div>
-
-        <div class="documentation-list">
-          <details class="documentation-item documentation-item-blue">
-            <summary>
-              <span class="documentation-icon" aria-hidden="true">01</span>
-              <span class="documentation-summary">
-                <strong>Plano Inicial</strong>
-                <small
-                  >Para negócios que querem começar a ser encontrados no A
-                  Carioca.</small
-                >
-              </span>
-              <span class="documentation-plus" aria-hidden="true">+</span>
-            </summary>
-            <div class="documentation-content">
-              <ul>
-                <li>
-                  <strong>Presença local — até 1 km²</strong><br />Sua loja
-                  aparece para usuários que estão dentro da área de atuação
-                  definida para o plano.
-                </li>
-                <li>
-                  <strong>Perfil exclusivo da loja</strong><br />Uma página
-                  própria para apresentar sua empresa, informações, produtos e
-                  identidade visual.
-                </li>
-                <li>
-                  <strong>Até 30 anúncios publicados</strong><br />Cadastre até
-                  30 produtos ou ofertas para mostrar aos clientes.
-                </li>
-                <li>
-                  <strong>Banners no perfil da loja</strong><br />Destaque
-                  promoções, campanhas, novidades ou informações importantes
-                  diretamente no seu perfil.
-                </li>
-                <li>
-                  <strong>Destaque de produtos no seu perfil</strong
-                  ><br />Escolha os produtos que merecem maior destaque dentro
-                  da página da sua loja.
-                </li>
-                <li>
-                  <strong>Até 4 fotos por produto</strong><br />Mostre seus
-                  produtos por diferentes ângulos e detalhes para ajudar o
-                  cliente na decisão de compra.
-                </li>
-                <li>
-                  <strong>Banner no feed principal do aplicativo</strong
-                  ><br />Aumente sua exposição com até 1 banner/mês no feed
-                  principal do A Carioca.
-                </li>
-                <li>
-                  <strong>Relatório de performance</strong><br />Acompanhe os
-                  resultados da sua presença na plataforma e entenda como os
-                  usuários estão interagindo com seus anúncios.
-                </li>
-              </ul>
-            </div>
-          </details>
-
-          <details class="documentation-item documentation-item-mint">
-            <summary>
-              <span class="documentation-icon" aria-hidden="true">02</span>
-              <span class="documentation-summary">
-                <strong>Plano Destaque</strong>
-                <small
-                  >Para negócios que querem ganhar mais visibilidade e crescer
-                  dentro da A Carioca.</small
-                >
-              </span>
-              <span class="documentation-plus" aria-hidden="true">+</span>
-            </summary>
-            <div class="documentation-content">
-              <ul>
-                <li>
-                  <strong>Tudo do Plano Inicial</strong><br />Tenha todos os
-                  recursos do Plano Inicial, com limites e possibilidades
-                  ampliados.
-                </li>
-                <li>
-                  <strong>Presença regional — até 5 km²</strong><br />Amplie a
-                  área em que sua loja pode ser encontrada e alcance um público
-                  maior dentro da região.
-                </li>
-                <li>
-                  <strong>Até 200 anúncios publicados</strong><br />Cadastre uma
-                  quantidade muito maior de produtos, ofertas e novidades da sua
-                  loja.
-                </li>
-                <li>
-                  <strong>Selo Autêntica Carioca</strong><br />Um selo exclusivo
-                  para destacar sua empresa como uma loja cadastrada e
-                  reconhecida dentro do A Carioca.
-                </li>
-                <li>
-                  <strong>Destaque no feed principal</strong><br />Ganhe maior
-                  visibilidade nos espaços de destaque do feed principal do
-                  aplicativo.
-                </li>
-                <li>
-                  <strong>Prioridade nos banners do feed</strong><br />Seus
-                  banners aparecem com prioridade em relação aos anunciantes do
-                  Plano Inicial, aumentando suas chances de serem vistos.
-                </li>
-                <li>
-                  <strong>Até 8 fotos por produto</strong><br />Tenha acesso a
-                  informações mais detalhadas sobre visualizações, interações e
-                  desempenho dos seus anúncios para entender melhor o que
-                  funciona para sua loja.
-                </li>
-                <li>
-                  <strong>Relatório completo de performance</strong
-                  ><br />Acompanhe os resultados da sua presença na plataforma e
-                  entenda como os usuários estão interagindo com seus anúncios.
-                </li>
-                <li>
-                  <strong>Conteúdos para Crescer</strong><br />Acesso a artigos,
-                  guias e tutoriais exclusivos sobre marketing, vendas, gestão
-                  financeira e estratégias para ajudar seu negócio a crescer.
-                </li>
-              </ul>
-            </div>
-          </details>
-
-          <details class="documentation-item documentation-item-navy">
-            <summary>
-              <span class="documentation-icon" aria-hidden="true">03</span>
-              <span class="documentation-summary">
-                <strong>Plano PRO</strong>
-                <small
-                  >Organize o catálogo informativo e escolha o nível de presença
-                  no app.</small
-                >
-              </span>
-              <span class="documentation-plus" aria-hidden="true">+</span>
-            </summary>
-            <div class="documentation-content">
-              <ul>
-                <li>
-                  <strong>Tudo do Plano Destaque</strong><br />Tenha todos os
-                  recursos e benefícios dos planos anteriores, com acesso ao
-                  nível mais completo da plataforma.
-                </li>
-                <li>
-                  <strong
-                    >Presença ampliada para o Estado do Rio de Janeiro</strong
-                  ><br />Leve sua loja para uma área de alcance ainda maior e
-                  aumente as oportunidades de ser encontrada por novos clientes.
-                </li>
-                <li>
-                  <strong>Selo PRO A Carioca</strong><br />Um selo exclusivo que
-                  diferencia sua empresa dentro da plataforma e reforça sua
-                  presença profissional.
-                </li>
-                <li>
-                  <strong>Máximo destaque no feed principal</strong><br />Sua
-                  loja e seus produtos ganham posição privilegiada nos espaços
-                  de maior visibilidade do aplicativo.
-                </li>
-                <li>
-                  <strong>Prioridade máxima nos banners</strong><br />Seus
-                  banners têm prioridade de exibição sobre os demais planos,
-                  aumentando sua exposição dentro do feed principal.
-                </li>
-                <li>
-                  <strong>Até [X] anúncios publicados</strong><br />Mostre seus
-                  produtos por diferentes ângulos e detalhes para ajudar o
-                  cliente na decisão de compra.
-                </li>
-                <li>
-                  <strong>Banner no feed principal do aplicativo</strong
-                  ><br />Aumente sua exposição com até 1 banner/mês no feed
-                  principal do A Carioca.
-                </li>
-                <li>
-                  <strong>Relatório de performance</strong><br />Acompanhe os
-                  resultados da sua presença na plataforma e entenda como os
-                  usuários estão interagindo com seus anúncios.
-                </li>
-              </ul>
-            </div>
-          </details>
-        </div>
-
-        <div class="documentation-footer">
-          <p class="documentation-help">
-            <span class="documentation-help-icon" aria-hidden="true">?</span>
-            <span>
-              Ainda ficou com alguma dúvida?
-
-              <a href="#contato">Fale com nossa equipe</a>
-            </span>
-          </p>
-          <a class="button button-primary documentation-button" href="#contato">
-            Quero cadastrar minha loja <span aria-hidden="true">→</span>
-          </a>
-        </div>
-
-        <p class="documentation-note">
-          As informações e documentos solicitados podem variar conforme a
-          situação da empresa. A equipe A Carioca confirmará os dados
-          necessários durante o atendimento.
-        </p>
-      </div>
-    </section>
-
-    <section id="planos" class="plans-section">
-      <div class="plans-intro">
-        <p class="section-kicker">PLANOS PARA LOJISTAS</p>
-        <h2>Escolha o espaço que seu negócio <em>merece.</em></h2>
-        <p>
-          Comece com o essencial ou escolha uma presença mais completa para
-          crescer com a sua região.
-        </p>
-      </div>
-      <div class="plans-grid">
-        <article class="plan-card">
-          <div class="plan-top"><span>01</span><span>O essencial</span></div>
-          <h3>INICIAL</h3>
-          <p class="plan-description">
-            Para começar a ser encontrado por clientes do seu bairro.
-          </p>
-          <div class="price">Gratuito</div>
-          <ul>
-            <li>✓ Página da loja</li>
-            <li>✓ Presença Local</li>
-            <li>✓ Banners personalizados*</li>
-            <li>✓ relatório</li>
-          </ul>
-          <a class="plan-link" href="#contato">Quero começar <span>→</span></a>
-        </article>
-
-        <article class="plan-card plan-card-middle">
-          <div class="plan-top">
-            <span>02</span><span>Mais visibilidade</span>
-          </div>
-          <h3>DESTAQUE</h3>
-          <p class="plan-description">
-            Para aparecer com mais força nas descobertas da sua região.
-          </p>
-          <div class="price"><small>R$</small>119,90<span>/mês</span></div>
-          <ul>
-            <li>✓ Tudo do Presença</li>
-            <li>✓ Posição de destaque</li>
-            <li>✓ Vitrine de produtos</li>
-          </ul>
-          <a class="plan-link" href="#contato">Quero destaque <span>→</span></a>
-        </article>
-        <article class="plan-card plan-featured">
-          <span class="recommended">MAIS PRESENÇA</span>
-          <div class="plan-top"><span>03</span></div>
-          <h3>PRO</h3>
-          <p class="plan-description">
-            Para marcas que querem ocupar o centro da conversa local.
-          </p>
-          <div class="price"><small>R$</small>499,90<span>/mês</span></div>
-          <ul>
-            <li>✓ Tudo do Destaque</li>
-            <li>✓ Campanhas especiais</li>
-            <li>✓ Atendimento prioritário</li>
-          </ul>
-          <a class="plan-link plan-link-featured" href="#contato"
-            >Falar com a equipe <span>→</span></a
-          >
-        </article>
-      </div>
-      <p class="plans-footnote">
-        Planos sob medida para a cada fase do seu negócio. Fale com a nossa
-        equipe para entender a melhor opção.
-      </p>
-    </section>
-
-    <!--SECTION DEPOIMENTOS
-<section id="depoimentos" class="partners-section">
-        <div class="content-width">
-          <div class="section-heading partners-heading">
-            <div>
-              <p class="section-kicker">PARCEIROS A CARIOCA</p>
-              <h2>Quem faz o Rio<br /><em>acontecer.</em></h2>
-            </div>
-            <p class="heading-note">
-              Depoimentos reais de lojistas parceiros, publicados com
-              autorização.
-            </p>
-          </div>
-          <div class="partner-testimonials">
-            <article class="partner-card">
-              <span class="partner-number">01</span>
-              <div class="partner-placeholder">
-                <strong>Depoimento de lojista parceiro</strong>
-                <p>
-                  Este espaço receberá a fala real de uma empresa parceira, após
-                  revisão e autorização de publicação.
+            <!-- BENEFÍCIOS -->
+            <div class="about-benefits-wrapper">
+              <div class="about-benefits-heading">
+                <span class="benefits-heading-line"></span>
+                <p class="benefits-intro">
+                  Tudo o que seu negócio precisa para ganhar presença e
+                  visibilidade.
                 </p>
+                <span class="benefits-heading-line"></span>
               </div>
-              <footer>
-                <span class="partner-avatar">A</span
-                ><span
-                  ><strong>Nome da empresa</strong
-                  ><small>Segmento · Rio de Janeiro</small></span
-                >
-              </footer>
-            </article>
-            <article class="partner-card partner-card-featured">
-              <span class="partner-number">02</span>
-              <div class="partner-placeholder">
-                <strong>Uma história real da nossa rede</strong>
-                <p>
-                  Conteúdo reservado para a experiência de um lojista que
-                  anuncia no aplicativo A Carioca.
-                </p>
+
+              <div class="about-benefits">
+                <!-- CARD 01 — SEM COMISSÃO -->
+                <article class="benefit-card benefit-card-blue">
+                  <div class="about-benefits-image">
+                    <img
+                      src="assets/about-benefits-image3.jpeg"
+                      alt="Comerciante trabalhando em sua loja"
+                      loading="lazy"
+                    />
+
+                    <div class="image-overlay"></div>
+
+                    <span class="image-label">
+                      MAIS LIBERDADE PARA ANUNCIAR
+                    </span>
+
+                    <div class="image-floating-element floating-percentage">
+                      <strong>0%</strong>
+                      <span>COMISSÃO</span>
+                    </div>
+                  </div>
+
+                  <div class="benefit-card-content">
+                    <div class="benefit-card-top">
+                      <div class="benefit-icon" aria-hidden="true">%</div>
+                    </div>
+
+                    <div class="benefit-number">0%</div>
+
+                    <h3>Sem comissão por venda.</h3>
+
+                    <p>
+                      Anuncie seus produtos sem pagar comissão sobre cada venda
+                      realizada.
+                    </p>
+                  </div>
+                </article>
+
+                <!-- CARD 02 — SUPORTE -->
+                <article class="benefit-card benefit-card-mint">
+                  <div class="about-benefits-image">
+                    <img
+                      src="assets/about-benefits-image1.jpeg"
+                      alt="Atendimento e suporte ao comerciante"
+                      loading="lazy"
+                    />
+
+                    <div class="image-overlay"></div>
+
+                    <span class="image-label"> ESTAMOS COM VOCÊ </span>
+                  </div>
+
+                  <div class="benefit-card-content">
+                    <div class="benefit-card-top">
+                      <div class="benefit-icon" aria-hidden="true">⚡</div>
+                    </div>
+
+                    <div class="benefit-number">Apoio</div>
+
+                    <h3>Comece com facilidade.</h3>
+
+                    <p>
+                      Conte com nossa equipe para orientar seu cadastro e ajudar
+                      você a começar.
+                    </p>
+                  </div>
+                </article>
+
+                <!-- CARD 03 — PROXIMIDADE -->
+                <article class="benefit-card benefit-card-yellow">
+                  <div class="about-benefits-image">
+                    <img
+                      src="assets/about-benefits-image2.jpeg"
+                      alt="Comércio local e lojas do Rio de Janeiro"
+                      loading="lazy"
+                    />
+
+                    <div class="image-overlay"></div>
+
+                    <span class="image-label"> CONEXÃO LOCAL </span>
+                  </div>
+
+                  <div class="benefit-card-content">
+                    <div class="benefit-card-top">
+                      <div class="benefit-icon" aria-hidden="true">✦</div>
+                    </div>
+
+                    <div class="benefit-number">Sua região</div>
+
+                    <h3>Mais perto de quem procura.</h3>
+
+                    <p>
+                      Apresente sua loja e seus produtos para pessoas que
+                      procuram opções na sua região.
+                    </p>
+                  </div>
+                </article>
+
+                <!-- CARD 04 — DESTAQUE -->
+                <article class="benefit-card benefit-card-purple">
+                  <div class="about-benefits-image">
+                    <img
+                      src="assets/plano_comerciante.png"
+                      alt="Recursos de divulgação para valorizar uma loja"
+                      loading="lazy"
+                    />
+
+                    <div class="image-overlay"></div>
+
+                    <span class="image-label"> VALORIZE SEU NEGÓCIO </span>
+                  </div>
+
+                  <div class="benefit-card-content">
+                    <div class="benefit-card-top">
+                      <div class="benefit-icon" aria-hidden="true">★</div>
+                    </div>
+
+                    <div class="benefit-number">Destaque</div>
+
+                    <h3>Valorize sua loja.</h3>
+
+                    <p>
+                      Utilize os recursos de divulgação da plataforma para
+                      valorizar sua loja e seus produtos.
+                    </p>
+                  </div>
+                </article>
               </div>
-              <footer>
-                <span class="partner-avatar">A</span
-                ><span
-                  ><strong>Nome do lojista</strong
-                  ><small>Segmento · Rio de Janeiro</small></span
-                >
-              </footer>
-            </article>
-            <article class="partner-card">
-              <span class="partner-number">03</span>
-              <div class="partner-placeholder">
-                <strong>Espaço para uma nova parceria</strong>
-                <p>
-                  Depoimentos serão adicionados somente com informações
-                  verdadeiras e autorização de uso.
-                </p>
-              </div>
-              <footer>
-                <span class="partner-avatar">A</span
-                ><span
-                  ><strong>Empresa parceira</strong
-                  ><small>Segmento · Rio de Janeiro</small></span
-                >
-              </footer>
-            </article>
+            </div>
           </div>
         </div>
       </section>
-    -->
 
-    <!-- Seção de contato corrigida: funciona com POST HTML, sem JavaScript -->
-    <section
-      id="contato"
-      class="contact-section"
-      aria-labelledby="contact-title"
-    >
-      <div class="contact-grid">
-        <div class="contact-copy">
-          <p class="section-kicker">FALE COM A CARIOCA</p>
-          <h2 id="contact-title">
-            Vamos falar sobre o<br />
-            <em> seu negócio.</em>
-          </h2>
-          <p>
-            Preencha os dados abaixo. Nossa equipe receberá sua mensagem e
-            entrará em contato.
-          </p>
-        </div>
+      <!-- =========================================================
+            SECTION DOCUMENTATION -- SEÇAO BENEFICIOS
+            ========================================================= -->
 
-        <form
-          class="contact-form"
-          action="https://formsubmit.co/a.carioca.maketplace@gmail.com"
-          method="POST"
-          accept-charset="UTF-8"
-        >
-          <input
-            type="hidden"
-            name="_subject"
-            value="Novo contato pelo site A Carioca"
-          />
-          <input
-            type="hidden"
-            name="_next"
-            value="https://a-carioca.com/obrigado.html"
-          />
-          <input type="hidden" name="_captcha" value="true" />
-          <input type="hidden" name="_template" value="table" />
-          <label for="nome">Seu nome</label>
-          <input
-            id="nome"
-            name="nome"
-            type="text"
-            autocomplete="name"
-            minlength="2"
-            required
-          />
-          <label for="empresa">Nome da empresa</label>
-          <input
-            id="empresa"
-            name="empresa"
-            type="text"
-            autocomplete="organization"
-            minlength="2"
-            required
-          />
-          <label for="email">Seu e-mail</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            autocomplete="email"
-            required
-          />
-          <label for="plano">Plano de interesse</label>
-          <select id="plano" name="plano" required>
-            <option value="Plano Inicial — Gratuito">
-              Plano Inicial — GRATUITO
-            </option>
-            <option value="Plano Destaque — R$ 119,90/mês">
-              Plano Destaque — R$ 119,90/mês
-            </option>
-            <option value="Plano PRO — R$ 499,90/mês">
-              Plano PRO — R$ 499,90/mês
-            </option>
-            <option value="Ainda não sei">Ainda não sei</option>
-          </select>
-          <label for="mensagem">Como podemos ajudar?</label>
-          <textarea
-            id="mensagem"
-            name="mensagem"
-            rows="5"
-            maxlength="2000"
-            placeholder="Escreva sua mensagem (opcional)"
-          ></textarea>
-          <button class="button button-primary" type="submit">
-            Enviar mensagem <span aria-hidden="true">→</span>
-          </button>
-        </form>
-      </div>
-    </section>
-
-    <!-- ==========================================================
-     SEÇÃO DE PERGUNTAS FREQUENTES
-     Cole este bloco no index.html, por exemplo antes da seção de contato.
-     ========================================================== -->
-    <section id="faq" class="faq-section" aria-labelledby="faq-title">
-      <div class="faq-decor faq-decor-left" aria-hidden="true"></div>
-      <div class="faq-decor faq-decor-right" aria-hidden="true"></div>
-
-      <div class="faq-container">
-        <div class="faq-heading">
-          <p class="section-kicker">TIRE SUAS DÚVIDAS</p>
-
-          <h2 id="faq-title">Perguntas <em>Frequentes</em></h2>
-
-          <p>
-            Tire suas dúvidas sobre A Carioca e comece a vender com mais
-            confiança e segurança.
-          </p>
-        </div>
-
-        <div class="faq-list">
-          <details class="faq-item">
-            <summary>
-              <span class="faq-icon" aria-hidden="true">◇</span>
-              <span>Por que vender na A Carioca?</span>
-              <span class="faq-plus" aria-hidden="true">+</span>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                A Carioca ajuda sua empresa a ganhar visibilidade e a ser
-                encontrada por clientes que valorizam produtos e negócios do Rio
-                de Janeiro.
-              </p>
+      <section
+        class="documentation-section"
+        id="documentacao"
+        aria-labelledby="documentation-title"
+      >
+        <div class="content-width">
+          <div class="documentation-heading">
+            <div>
+              <p class="section-kicker">TODOS OS BENEFÍCIOS</p>
+              <h2 id="documentation-title">
+                Coloque sua loja <em>no Mapa</em>
+              </h2>
             </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              <span class="faq-icon" aria-hidden="true">♙</span>
-              <span>Quem pode vender na A Carioca?</span>
-              <span class="faq-plus" aria-hidden="true">+</span>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                Lojistas, empreendedores, MEIs e empresas que ofereçam produtos
-                ou serviços compatíveis com a proposta do marketplace.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              <span class="faq-icon" aria-hidden="true">$</span>
-              <span>Quanto custa vender na A Carioca?</span>
-              <span class="faq-plus" aria-hidden="true">+</span>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                Você pode escolher entre os planos disponíveis para lojistas.
-                Consulte a seção de planos para comparar os benefícios e valores
-                de cada opção.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              <span class="faq-icon" aria-hidden="true">▦</span>
-              <span>Quais categorias posso vender na A Carioca?</span>
-              <span class="faq-plus" aria-hidden="true">+</span>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                A Carioca disponibiliza diversas categorias, incluindo
-                tecnologia ,moda, casa e decoração, esportes e lazer, livros, e
-                muito mais.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              <span class="faq-icon" aria-hidden="true">▣</span>
-              <span>Quando a mensalidade começará a ser cobrada?</span>
-              <span class="faq-plus" aria-hidden="true">+</span>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                A cobrança começa após a confirmação do plano e da ativação da
-                sua presença no marketplace. Nossa equipe explicará as condições
-                antes da contratação.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              <span class="faq-icon" aria-hidden="true">⚙</span>
-              <span>Como eu gerencio minha conta de lojista?</span>
-              <span class="faq-plus" aria-hidden="true">+</span>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                Após o cadastro, nossa equipe entrará em contato,guiando e
-                orientando você sobre o uso da plataforma.
-              </p>
-            </div>
-          </details>
-        </div>
-
-        <div class="faq-support">
-          <div class="faq-support-question" aria-hidden="true">?</div>
-
-          <div class="faq-support-copy">
-            <strong>Não encontrou sua dúvida?</strong>
-            <span>Fale com nosso time, estamos prontos para te ajudar.</span>
           </div>
 
-          <a class="button button-primary faq-support-button" href="#contato">
-            <span aria-hidden="true">▣</span>
-            Falar com o suporte
+          <div class="documentation-list">
+            <details class="documentation-item documentation-item-blue">
+              <summary>
+                <span class="documentation-icon" aria-hidden="true">01</span>
+                <span class="documentation-summary">
+                  <strong>Plano Inicial</strong>
+                  <small
+                    >Para negócios que querem começar a ser encontrados no A
+                    Carioca.</small
+                  >
+                </span>
+                <span class="documentation-plus" aria-hidden="true">+</span>
+              </summary>
+              <div class="documentation-content">
+                <ul>
+                  <li>
+                    <strong>Presença local — até 1 km²</strong><br />Sua loja
+                    aparece para usuários que estão dentro da área de atuação
+                    definida para o plano.
+                  </li>
+                  <li>
+                    <strong>Perfil exclusivo da loja</strong><br />Uma página
+                    própria para apresentar sua empresa, informações, produtos e
+                    identidade visual.
+                  </li>
+                  <li>
+                    <strong>Até 30 anúncios publicados</strong><br />Cadastre
+                    até 30 produtos ou ofertas para mostrar aos clientes.
+                  </li>
+                  <li>
+                    <strong>Banners no perfil da loja</strong><br />Destaque
+                    promoções, campanhas, novidades ou informações importantes
+                    diretamente no seu perfil.
+                  </li>
+                  <li>
+                    <strong>Destaque de produtos no seu perfil</strong
+                    ><br />Escolha os produtos que merecem maior destaque dentro
+                    da página da sua loja.
+                  </li>
+                  <li>
+                    <strong>Até 4 fotos por produto</strong><br />Mostre seus
+                    produtos por diferentes ângulos e detalhes para ajudar o
+                    cliente na decisão de compra.
+                  </li>
+                  <li>
+                    <strong>Banner no feed principal do aplicativo</strong
+                    ><br />Aumente sua exposição com até 1 banner/mês no feed
+                    principal do A Carioca.
+                  </li>
+                  <li>
+                    <strong>Relatório de performance</strong><br />Acompanhe os
+                    resultados da sua presença na plataforma e entenda como os
+                    usuários estão interagindo com seus anúncios.
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="documentation-item documentation-item-mint">
+              <summary>
+                <span class="documentation-icon" aria-hidden="true">02</span>
+                <span class="documentation-summary">
+                  <strong>Plano Destaque</strong>
+                  <small
+                    >Para negócios que querem ganhar mais visibilidade e crescer
+                    dentro da A Carioca.</small
+                  >
+                </span>
+                <span class="documentation-plus" aria-hidden="true">+</span>
+              </summary>
+              <div class="documentation-content">
+                <ul>
+                  <li>
+                    <strong>Tudo do Plano Inicial</strong><br />Tenha todos os
+                    recursos do Plano Inicial, com limites e possibilidades
+                    ampliados.
+                  </li>
+                  <li>
+                    <strong>Presença regional — até 5 km²</strong><br />Amplie a
+                    área em que sua loja pode ser encontrada e alcance um
+                    público maior dentro da região.
+                  </li>
+                  <li>
+                    <strong>Até 200 anúncios publicados</strong><br />Cadastre
+                    uma quantidade muito maior de produtos, ofertas e novidades
+                    da sua loja.
+                  </li>
+                  <li>
+                    <strong>Selo Autêntica Carioca</strong><br />Um selo
+                    exclusivo para destacar sua empresa como uma loja cadastrada
+                    e reconhecida dentro do A Carioca.
+                  </li>
+                  <li>
+                    <strong>Destaque no feed principal</strong><br />Ganhe maior
+                    visibilidade nos espaços de destaque do feed principal do
+                    aplicativo.
+                  </li>
+                  <li>
+                    <strong>Prioridade nos banners do feed</strong><br />Seus
+                    banners aparecem com prioridade em relação aos anunciantes
+                    do Plano Inicial, aumentando suas chances de serem vistos.
+                  </li>
+                  <li>
+                    <strong>Até 8 fotos por produto</strong><br />Tenha acesso a
+                    informações mais detalhadas sobre visualizações, interações
+                    e desempenho dos seus anúncios para entender melhor o que
+                    funciona para sua loja.
+                  </li>
+                  <li>
+                    <strong>Relatório completo de performance</strong
+                    ><br />Acompanhe os resultados da sua presença na plataforma
+                    e entenda como os usuários estão interagindo com seus
+                    anúncios.
+                  </li>
+                  <li>
+                    <strong>Conteúdos para Crescer</strong><br />Acesso a
+                    artigos, guias e tutoriais exclusivos sobre marketing,
+                    vendas, gestão financeira e estratégias para ajudar seu
+                    negócio a crescer.
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="documentation-item documentation-item-navy">
+              <summary>
+                <span class="documentation-icon" aria-hidden="true">03</span>
+                <span class="documentation-summary">
+                  <strong>Plano PRO</strong>
+                  <small
+                    >Organize o catálogo informativo e escolha o nível de
+                    presença no app.</small
+                  >
+                </span>
+                <span class="documentation-plus" aria-hidden="true">+</span>
+              </summary>
+              <div class="documentation-content">
+                <ul>
+                  <li>
+                    <strong>Tudo do Plano Destaque</strong><br />Tenha todos os
+                    recursos e benefícios dos planos anteriores, com acesso ao
+                    nível mais completo da plataforma.
+                  </li>
+                  <li>
+                    <strong
+                      >Presença ampliada para o Estado do Rio de Janeiro</strong
+                    ><br />Leve sua loja para uma área de alcance ainda maior e
+                    aumente as oportunidades de ser encontrada por novos
+                    clientes.
+                  </li>
+                  <li>
+                    <strong>Selo PRO A Carioca</strong><br />Um selo exclusivo
+                    que diferencia sua empresa dentro da plataforma e reforça
+                    sua presença profissional.
+                  </li>
+                  <li>
+                    <strong>Máximo destaque no feed principal</strong><br />Sua
+                    loja e seus produtos ganham posição privilegiada nos espaços
+                    de maior visibilidade do aplicativo.
+                  </li>
+                  <li>
+                    <strong>Prioridade máxima nos banners</strong><br />Seus
+                    banners têm prioridade de exibição sobre os demais planos,
+                    aumentando sua exposição dentro do feed principal.
+                  </li>
+                  <li>
+                    <strong>Até [X] anúncios publicados</strong><br />Mostre
+                    seus produtos por diferentes ângulos e detalhes para ajudar
+                    o cliente na decisão de compra.
+                  </li>
+                  <li>
+                    <strong>Banner no feed principal do aplicativo</strong
+                    ><br />Aumente sua exposição com até 1 banner/mês no feed
+                    principal do A Carioca.
+                  </li>
+                  <li>
+                    <strong>Relatório de performance</strong><br />Acompanhe os
+                    resultados da sua presença na plataforma e entenda como os
+                    usuários estão interagindo com seus anúncios.
+                  </li>
+                </ul>
+              </div>
+            </details>
+          </div>
+
+          <div class="documentation-footer">
+            <p class="documentation-help">
+              <span class="documentation-help-icon" aria-hidden="true">?</span>
+              <span>
+                Ainda ficou com alguma dúvida?
+
+                <a href="#contato">Fale com nossa equipe</a>
+              </span>
+            </p>
+            <a
+              class="button button-primary documentation-button"
+              href="#contato"
+            >
+              Quero cadastrar minha loja <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <p class="documentation-note">
+            As informações e documentos solicitados podem variar conforme a
+            situação da empresa. A equipe A Carioca confirmará os dados
+            necessários durante o atendimento.
+          </p>
+        </div>
+      </section>
+
+      <!-- =========================================================
+            SECTION PLANOS
+            ========================================================= -->
+
+      <section id="planos" class="plans-section">
+        <div class="plans-intro">
+          <p class="section-kicker">PLANOS PARA LOJISTAS</p>
+          <h2>Escolha o espaço que seu negócio <em>merece.</em></h2>
+          <p>
+            Comece com o essencial ou escolha uma presença mais completa para
+            crescer com a sua região.
+          </p>
+        </div>
+        <div class="plans-grid">
+          <article class="plan-card">
+            <div class="plan-top"><span>01</span><span>O essencial</span></div>
+            <h3>INICIAL</h3>
+            <p class="plan-description">
+              Para começar a ser encontrado por clientes do seu bairro.
+            </p>
+            <div class="price">Gratuito</div>
+            <ul>
+              <li>✓ Página da loja</li>
+              <li>✓ Presença Local</li>
+              <li>✓ Banners personalizados*</li>
+              <li>✓ relatório</li>
+            </ul>
+            <a class="plan-link" href="#contato"
+              >Quero começar <span>→</span></a
+            >
+          </article>
+
+          <article class="plan-card plan-card-middle">
+            <div class="plan-top">
+              <span>02</span><span>Mais visibilidade</span>
+            </div>
+            <h3>DESTAQUE</h3>
+            <p class="plan-description">
+              Para aparecer com mais força nas descobertas da sua região.
+            </p>
+            <div class="price"><small>R$</small>119,90<span>/mês</span></div>
+            <ul>
+              <li>✓ Tudo do Presença</li>
+              <li>✓ Posição de destaque</li>
+              <li>✓ Vitrine de produtos</li>
+            </ul>
+            <a class="plan-link" href="#contato"
+              >Quero destaque <span>→</span></a
+            >
+          </article>
+          <article class="plan-card plan-featured">
+            <span class="recommended">MAIS PRESENÇA</span>
+            <div class="plan-top"><span>03</span></div>
+            <h3>PRO</h3>
+            <p class="plan-description">
+              Para marcas que querem ocupar o centro da conversa local.
+            </p>
+            <div class="price"><small>R$</small>499,90<span>/mês</span></div>
+            <ul>
+              <li>✓ Tudo do Destaque</li>
+              <li>✓ Campanhas especiais</li>
+              <li>✓ Atendimento prioritário</li>
+            </ul>
+            <a class="plan-link plan-link-featured" href="#contato"
+              >Falar com a equipe <span>→</span></a
+            >
+          </article>
+        </div>
+        <p class="plans-footnote">
+          Planos sob medida para a cada fase do seu negócio. Fale com a nossa
+          equipe para entender a melhor opção.
+        </p>
+      </section>
+
+      <!--SECTION DEPOIMENTOS
+        <section id="depoimentos" class="partners-section">
+                <div class="content-width">
+                    <div class="section-heading partners-heading">
+                    <div>
+                        <p class="section-kicker">PARCEIROS A CARIOCA</p>
+                        <h2>Quem faz o Rio<br /><em>acontecer.</em></h2>
+                    </div>
+                    <p class="heading-note">
+                        Depoimentos reais de lojistas parceiros, publicados com
+                        autorização.
+                    </p>
+                    </div>
+                    <div class="partner-testimonials">
+                    <article class="partner-card">
+                        <span class="partner-number">01</span>
+                        <div class="partner-placeholder">
+                        <strong>Depoimento de lojista parceiro</strong>
+                        <p>
+                            Este espaço receberá a fala real de uma empresa parceira, após
+                            revisão e autorização de publicação.
+                        </p>
+                        </div>
+                        <footer>
+                        <span class="partner-avatar">A</span
+                        ><span
+                            ><strong>Nome da empresa</strong
+                            ><small>Segmento · Rio de Janeiro</small></span
+                        >
+                        </footer>
+                    </article>
+                    <article class="partner-card partner-card-featured">
+                        <span class="partner-number">02</span>
+                        <div class="partner-placeholder">
+                        <strong>Uma história real da nossa rede</strong>
+                        <p>
+                            Conteúdo reservado para a experiência de um lojista que
+                            anuncia no aplicativo A Carioca.
+                        </p>
+                        </div>
+                        <footer>
+                        <span class="partner-avatar">A</span
+                        ><span
+                            ><strong>Nome do lojista</strong
+                            ><small>Segmento · Rio de Janeiro</small></span
+                        >
+                        </footer>
+                    </article>
+                    <article class="partner-card">
+                        <span class="partner-number">03</span>
+                        <div class="partner-placeholder">
+                        <strong>Espaço para uma nova parceria</strong>
+                        <p>
+                            Depoimentos serão adicionados somente com informações
+                            verdadeiras e autorização de uso.
+                        </p>
+                        </div>
+                        <footer>
+                        <span class="partner-avatar">A</span
+                        ><span
+                            ><strong>Empresa parceira</strong
+                            ><small>Segmento · Rio de Janeiro</small></span
+                        >
+                        </footer>
+                    </article>
+                    </div>
+                </div>
+                </section>
+            -->
+
+      <!-- Seção de contato 
+
+
+      <!-- <section
+                id="contato"
+                class="contact-section"
+                aria-labelledby="contact-title"
+            >
+                <div class="contact-grid">
+                <div class="contact-copy">
+                    <p class="section-kicker">FALE COM A CARIOCA</p>
+                    <h2 id="contact-title">
+                    Vamos falar sobre o<br />
+                    <em> seu negócio.</em>
+                    </h2>
+                    <p>
+                    Preencha os dados abaixo. Nossa equipe receberá sua mensagem e
+                    entrará em contato.
+                    </p>
+                </div>
+        
+                <form
+                    class="contact-form"
+                    action="https://formsubmit.co/a.carioca.maketplace@gmail.com"
+                    method="POST"
+                    accept-charset="UTF-8"
+                >
+                    <input
+                    type="hidden"
+                    name="_subject"
+                    value="Novo contato pelo site A Carioca"
+                    />
+                    <input
+                    type="hidden"
+                    name="_next"
+                    value="https://a-carioca.com/obrigado.html"
+                    />
+                    <input type="hidden" name="_captcha" value="true" />
+                    <input type="hidden" name="_template" value="table" />
+                    <label for="nome">Seu nome</label>
+                    <input
+                    id="nome"
+                    name="nome"
+                    type="text"
+                    autocomplete="name"
+                    minlength="2"
+                    required
+                    />
+                    <label for="empresa">Nome da empresa</label>
+                    <input
+                    id="empresa"
+                    name="empresa"
+                    type="text"
+                    autocomplete="organization"
+                    minlength="2"
+                    required
+                    />
+                    <label for="email">Seu e-mail</label>
+                    <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                    />
+                    <label for="plano">Plano de interesse</label>
+                    <select id="plano" name="plano" required>
+                    <option value="Plano Inicial — Gratuito">
+                        Plano Inicial — GRATUITO
+                    </option>
+                    <option value="Plano Destaque — R$ 119,90/mês">
+                        Plano Destaque — R$ 119,90/mês
+                    </option>
+                    <option value="Plano PRO — R$ 499,90/mês">
+                        Plano PRO — R$ 499,90/mês
+                    </option>
+                    <option value="Ainda não sei">Ainda não sei</option>
+                    </select>
+                    <label for="mensagem">Como podemos ajudar?</label>
+                    <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    rows="5"
+                    maxlength="2000"
+                    placeholder="Escreva sua mensagem (opcional)"
+                    ></textarea>
+                    <button class="button button-primary" type="submit">
+                    Enviar mensagem <span aria-hidden="true">→</span>
+                    </button>
+                </form>
+                </div>
+            </section>
+         -->
+
+      <section id="calculation" class="calculation">
+        <div class="container">
+          <header class="header">
+            <div class="brand">A CARIOCA</div>
+
+            <h1>Quanto você economiza?</h1>
+
+            <p>Descubra quanto pode sobrar no seu bolso usando a A Carioca.</p>
+          </header>
+
+          <div class="calculator">
+            <h2 class="section-title">Vamos fazer as contas?</h2>
+
+            <div class="field">
+              <div class="field-top">
+                <label for="sales">Quanto sua loja vende por mês?</label>
+                <output id="salesValue">R$ 10.000</output>
+              </div>
+
+              <input
+                type="range"
+                id="sales"
+                min="0"
+                max="100000"
+                step="500"
+                value="10000"
+              />
+
+              <div class="range-limits">
+                <span>R$ 0</span>
+                <span>R$ 100 mil</span>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="field-top">
+                <label for="commission"> Quanto você paga de comissão? </label>
+                <output id="commissionValue">5%</output>
+              </div>
+
+              <input
+                type="range"
+                id="commission"
+                min="0"
+                max="20"
+                step="0.5"
+                value="5"
+              />
+
+              <div class="range-limits">
+                <span>0%</span>
+                <span>25%</span>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="field-top">
+                <label for="ads"> Quanto gasta com divulgação por mês? </label>
+                <output id="adsValue">R$ 200</output>
+              </div>
+
+              <input
+                type="range"
+                id="ads"
+                min="0"
+                max="5000"
+                step="50"
+                value="200"
+              />
+
+              <div class="range-limits">
+                <span>R$ 0</span>
+                <span>R$ 5 mil</span>
+              </div>
+            </div>
+
+            <hr class="divider" />
+
+            <h2 class="section-title">E na A Carioca?</h2>
+
+            <div class="field">
+              <div class="field-top">
+                <label for="plan">Escolha seu plano</label>
+                <output id="planValue">R$ 39,90</output>
+              </div>
+
+              <select id="plan" class="plan-select">
+                <option value="GRATUITO">GRATUITO</option>
+                <option value="comerciante" selected>Destaque</option>
+                <option value="profissional">PRO</option>
+              </select>
+
+              <small id="planPromotion"></small>
+            </div>
+
+            <div class="results">
+              <h2>Olha quanto pode sobrar!</h2>
+
+              <p class="subtitle">
+                Veja a diferença entre seus gastos atuais e o valor do plano A
+                Carioca.
+              </p>
+
+              <div class="saving-card">
+                <span id="resultLabel">Sua economia por mês</span>
+                <strong id="monthlySaving">R$ 600,10</strong>
+                <small id="annualSaving">R$ 7.201,20 por ano</small>
+              </div>
+
+              <div class="result-details">
+                <div class="detail">
+                  <span>Seus gastos atuais</span>
+                  <strong id="currentCost">R$ 700,00</strong>
+                </div>
+
+                <div class="detail">
+                  <span>Com a A Carioca</span>
+                  <strong id="newCost">R$ 99,90</strong>
+                </div>
+              </div>
+
+              <p class="explanation" id="explanation">
+                Uma diferença que pode fazer bem ao seu negócio!
+              </p>
+            </div>
+
+            <p class="notice">
+              Simulação ilustrativa. Considere apenas comissões e gastos de
+              divulgação que realmente deixariam de existir. A A Carioca não
+              realiza suas vendas nem cobra comissão sobre elas. O valor do
+              plano pode ser ajustado acima.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- ==========================================================
+            SECTION FAQ  --  PERGUNTAS FREQUENTES
+            ========================================================== -->
+      <section id="faq" class="faq-section" aria-labelledby="faq-title">
+        <div class="faq-decor faq-decor-left" aria-hidden="true"></div>
+        <div class="faq-decor faq-decor-right" aria-hidden="true"></div>
+
+        <div class="faq-container">
+          <div class="faq-heading">
+            <p class="section-kicker">TIRE SUAS DÚVIDAS</p>
+
+            <h2 id="faq-title">Perguntas <em>Frequentes</em></h2>
+
+            <p>
+              Tire suas dúvidas sobre A Carioca e comece a vender com mais
+              confiança e segurança.
+            </p>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>
+                <span class="faq-icon" aria-hidden="true">◇</span>
+                <span>Por que vender na A Carioca?</span>
+                <span class="faq-plus" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  A Carioca ajuda sua empresa a ganhar visibilidade e a ser
+                  encontrada por clientes que valorizam produtos e negócios do
+                  Rio de Janeiro.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                <span class="faq-icon" aria-hidden="true">♙</span>
+                <span>Quem pode vender na A Carioca?</span>
+                <span class="faq-plus" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  Lojistas, empreendedores, MEIs e empresas que ofereçam
+                  produtos ou serviços compatíveis com a proposta do
+                  marketplace.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                <span class="faq-icon" aria-hidden="true">$</span>
+                <span>Quanto custa vender na A Carioca?</span>
+                <span class="faq-plus" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  Você pode escolher entre os planos disponíveis para lojistas.
+                  Consulte a seção de planos para comparar os benefícios e
+                  valores de cada opção.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                <span class="faq-icon" aria-hidden="true">▦</span>
+                <span>Quais categorias posso vender na A Carioca?</span>
+                <span class="faq-plus" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  A Carioca disponibiliza diversas categorias, incluindo
+                  tecnologia ,moda, casa e decoração, esportes e lazer, livros,
+                  e muito mais.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                <span class="faq-icon" aria-hidden="true">▣</span>
+                <span>Quando a mensalidade começará a ser cobrada?</span>
+                <span class="faq-plus" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  A cobrança começa após a confirmação do plano e da ativação da
+                  sua presença no marketplace. Nossa equipe explicará as
+                  condições antes da contratação.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                <span class="faq-icon" aria-hidden="true">⚙</span>
+                <span>Como eu gerencio minha conta de lojista?</span>
+                <span class="faq-plus" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  Após o cadastro, nossa equipe entrará em contato,guiando e
+                  orientando você sobre o uso da plataforma.
+                </p>
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-support">
+            <div class="faq-support-question" aria-hidden="true">?</div>
+
+            <div class="faq-support-copy">
+              <strong>Não encontrou sua dúvida?</strong>
+              <span>Fale com nosso time, estamos prontos para te ajudar.</span>
+            </div>
+
+            <a class="button button-primary faq-support-button" href="#contato">
+              <span aria-hidden="true">▣</span>
+              Falar com o suporte
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===========================
+                SEÇÃO BANNER -- CTA
+                =========================== -->
+      <section class="banner">
+        <!-- TEXTO -->
+
+        <div class="banner-content">
+          <h1 class="banner-title">
+            Estamos<br />
+            no <span class="highlight">WhatsApp!</span>
+          </h1>
+
+          <p class="banner-description">
+            Entre em contato e receba atendimento rápido e personalizado.
+          </p>
+
+          <a
+            href="https://wa.me/5521970577811"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="whatsapp-button"
+          >
+            <!-- Ícone WhatsApp -->
+
+            <svg
+              class="whatsapp-icon"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 2.5C8.55 2.5 2.5 8.45 2.5 15.8C2.5 18.2 3.15 20.45 4.25 22.4L2.5 29.5L9.8 27.6C11.7 28.6 13.8 29.1 16 29.1C23.45 29.1 29.5 23.15 29.5 15.8C29.5 8.45 23.45 2.5 16 2.5Z"
+                stroke="currentColor"
+                stroke-width="2.6"
+                stroke-linejoin="round"
+              />
+
+              <path
+                d="M11.2 9.3C10.7 9.3 10.1 9.9 9.9 10.5C9.5 11.3 9.5 12.4 10.1 13.6C11.3 16.5 13.8 19 16.7 20.2C18.1 20.8 19.1 20.8 20 20.4C20.6 20.1 21.2 19.5 21.2 19C21.2 18.7 21 18.5 20.7 18.3L18.5 17.2C18.2 17 17.9 17 17.7 17.3L16.7 18.5C15.2 17.9 14 16.7 13.3 15.2L14.5 14.2C14.8 14 14.8 13.7 14.6 13.4L13.5 11.2C13.3 10.8 13.1 10.7 12.8 10.6Z"
+                fill="currentColor"
+              />
+            </svg>
+
+            <span>Falar agora</span>
+
+            <!-- Seta -->
+
+            <svg class="button-arrow" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M9 5L16 12L9 19"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </a>
         </div>
-      </div>
-    </section>
 
-    <!-- ===========================
-         SEÇÃO: CTA (CHAMADA PARA AÇÃO)
-         =========================== -->
+        <!-- MOCKUP DO CELULAR -->
 
-    <section class="cta">
-      <div class="cta-overlay"></div>
+        <div class="phone-area">
+          <div class="phone">
+            <div class="phone-screen">
+              <!-- Notch -->
 
-      <div class="cta-content content-width">
-        <p class="section-kicker light">LEVE O RIO COM VOCÊ</p>
-        <h2>Seu próximo achado<br /><em>começa aqui.</em></h2>
-        <p>
-          Quer anunciar no app ou saber mais sobre os planos? Fale com a equipe
-          A Carioca.
-        </p>
-        <a class="button button-primary" href="formulario-contato.md"
-          >Falar com a equipe <span>→</span></a
-        >
-      </div>
-    </section>
-    <!-- ===========================
-         RODAPÉ (FOOTER)
-         =========================== -->
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h4>Contato</h4>
-          <ul>
-            <li>📧 contato@a-carioca.com.br</li>
-            <li>📱 (21) 981292373</li>
-            <li>📍 Rio de Janeiro, RJ</li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="termos.html">Termos de Uso</a></li>
-            <li><a href="termos.html#privacidade">Privacidade</a></li>
-            <li><a href="termos.html#cookies">Cookies</a></li>
-          </ul>
-        </div>
+              <div class="phone-notch">
+                <div class="phone-camera"></div>
+              </div>
 
-        <div class="footer-section">
-          <h4>Links Rápidos</h4>
-          <ul>
-            <div>
-              <li><a href="#planos">Planos para lojistas</a></li>
-              <li><a href="#contato">Contato</a></li>
-              <li><a href="#sobre">Sobre nós</a></li>
-              <li><a href="termos.html">Termos e Políticas</a></li>
+              <!-- Cabeçalho -->
+
+              <header class="phone-header">
+                <span class="phone-back">‹</span>
+
+                <div class="phone-logo">AC</div>
+
+                <div class="phone-brand">
+                  <strong> A Carioca <span class="verified">●</span> </strong>
+
+                  <small>online</small>
+                </div>
+
+                <div class="phone-actions">
+                  <span>▣</span>
+                  <span>☎</span>
+                </div>
+              </header>
+
+              <!-- Conversa -->
+
+              <div class="chat-background">
+                <div class="chat-content">
+                  <div class="message received">
+                    Olá! 👋<br />
+                    Como podemos ajudar?
+
+                    <span class="message-time"> 16:24 </span>
+                  </div>
+
+                  <div class="message sent">
+                    Quero saber mais<br />
+                    sobre a loja.
+
+                    <span class="message-time">
+                      16:25
+                      <span class="message-check">✓✓</span>
+                    </span>
+                  </div>
+
+                  <div class="message received">
+                    Claro! Vou te enviar<br />
+                    as informações.
+
+                    <span class="message-time"> 16:26 </span>
+                  </div>
+                </div>
+              </div>
             </div>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h4>Redes Sociais</h4>
-          <div class="social-links">
-            <a href="#" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-
-            <a href="#" aria-label="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-
-            <a href="#" aria-label="TikTok">
-              <i class="fab fa-tiktok"></i>
-            </a>
           </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 A Carioca. Todos os direitos reservados.</p>
+      </section>
 
-        <div class="footer-bottom-links">
-          <a href="termos.html">Termos e Políticas</a>
-          <a href="index.html">Página Inicial</a>
+      <!-- ===========================
+                RODAPÉ (FOOTER)
+                =========================== -->
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <ul>
+              <li>📧 contato@a-carioca.com.br</li>
+              <li>📱 (21) 970577811</li>
+              <li>📍 Rio de Janeiro, RJ</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="termos.html">Termos de Uso</a></li>
+              <li><a href="termos.html#privacidade">Privacidade</a></li>
+              <li><a href="termos.html#cookies">Cookies</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Links Rápidos</h4>
+            <ul>
+              <div>
+                <li><a href="#planos">Planos para lojistas</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#sobre">Sobre nós</a></li>
+                <li><a href="termos.html">Termos e Políticas</a></li>
+              </div>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+              <a href="#" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+
+              <a href="#" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+
+              <a href="#" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-    </footer>
+        <div class="footer-bottom">
+          <p>© 2026 A Carioca. Todos os direitos reservados.</p>
+
+          <div class="footer-bottom-links">
+            <a href="termos.html">Termos e Políticas</a>
+            <a href="index.html">Página Inicial</a>
+          </div>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>
